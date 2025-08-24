@@ -3,7 +3,7 @@ from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from database import get_db, MovieModel
-from schemas import MovieListResponseSchema, MovieDetailResponseSchema
+from src.schemas import MovieListResponseSchema, MovieDetailResponseSchema
 
 router = APIRouter()
 
