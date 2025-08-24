@@ -27,7 +27,10 @@ async def get_movies(
     total_items = total_query.scalar_one()
 
     if total_items == 0:
-        raise HTTPException(status_code=404, detail="No movies found.")
+        raise HTTPException(
+            status_code=404,
+            detail="No movies found."
+        )
 
     total_pages = (total_items + per_page - 1) // per_page
 
